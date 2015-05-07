@@ -272,7 +272,7 @@ void Mesh::correctEdges(std::stack<unsigned>& suspEdgeIndices, std::unordered_se
         unsigned eIndex = suspEdgeIndices.top();
         suspEdgeIndices.pop();
         const HalfEdge &e = halfEdges[eIndex];
-        if(checked.find(e.getHashValue()) != checked.end()) // Skip edges that have already been checked.
+        if(checked.find(e.getHashValue()) != checked.end()) // Skip edges that has already been checked.
             continue;
         checked.insert(e.getHashValue());
         if(e.neighborIndex == MAX_UINT) // No neighbor, must be Delaunay.
