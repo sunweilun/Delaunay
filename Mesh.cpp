@@ -507,8 +507,6 @@ void Mesh::delaunay(const std::vector<vec3>& v)
     for(unsigned i=0; i<vList.size(); i++)
     {
         insertVertex(i+3);
-        //if(i==2)
-        //break;
     }
 
     destroyGhostTriangle();
